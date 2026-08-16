@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: rajarata-daytrail-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_REGISTRATION_CODE
+        sync: false
+      - key: SEED_ADMIN_NAME
+        value: Naleer
+      - key: SEED_ADMIN_EMAIL
+        sync: false
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      - key: CLIENT_URL
+        sync: false
