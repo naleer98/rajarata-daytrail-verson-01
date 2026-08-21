@@ -33,7 +33,3 @@ npm run dev
 ```
 
 The PWA service worker activates in the production build (`npm run build` + `npm run preview`). Weather requires internet access. Favourites, reviews and analytics work locally even when the backend is unavailable.
-
-## CORS
-
-Development mode accepts localhost, `127.0.0.1` and LAN browser origins automatically. In production, set `CLIENT_URL` to the exact trusted frontend domain (multiple domains may be comma-separated).
