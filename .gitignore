@@ -13,8 +13,7 @@ frontend/.env
 backend/.env
 
 # Runtime uploads and logs
-backend/uploads/
-uploads/
+
 *.log
 npm-debug.log*
 
