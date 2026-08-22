@@ -282,17 +282,29 @@ export default function AIChatBot() {
   return (
     <>
       {!open && (
-        <button className="chat-launcher premium-chat-launcher" onClick={() => setOpen(true)} aria-label="Open RajaRata AI guide">
-          <span className="chat-pulse" />
-          <span className="premium-launcher-icon"><MessageCircle size={24} /></span>
-          <span className="chat-launcher-copy">
-            <small>YOUR LOCAL COMPANION</small>
-            <b>Ask RajaRata AI</b>
-            <span>Ready to plan your visit</span>
-          </span>
-          <Sparkles className="launcher-spark" size={15} />
-        </button>
-      )}
+  <button
+    className="chat-launcher ai-assistant-launcher"
+    onClick={() => setOpen(true)}
+    aria-label="Open RajaRata AI guide"
+  >
+    <span className="ai-assistant-person">
+      <img
+        src="/images/ai-assistant-girl.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </span>
+
+    <span className="ai-assistant-button">
+      <MessageCircle size={22} />
+      <b>Ask AI</b>
+    </span>
+
+    <span className="ai-assistant-status">
+      <span />
+    </span>
+  </button>
+)}
 
       {open && (
         <section className="chat-window premium-chat-window" aria-label="RajaRata AI travel guide">
