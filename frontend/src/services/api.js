@@ -6,7 +6,8 @@ const api = axios.create({
     import.meta.env.VITE_API_BASE_URL ||
     '/api',
 
-  timeout: 10000
+  // Default timeout for normal backend requests
+  timeout: 30000
 })
 
 
@@ -121,6 +122,10 @@ export const chatWithAssistant = (
     {
       message,
       history
+    },
+    {
+      // NVIDIA AI response can take longer on a cold start
+      timeout: 120000
     }
   )
 
